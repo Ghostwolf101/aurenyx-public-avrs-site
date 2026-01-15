@@ -17,13 +17,17 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    # environment block removed because 'github-pages' is not a valid environment name by default
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Prepare publish artifact (public-only)
         shell: bash
