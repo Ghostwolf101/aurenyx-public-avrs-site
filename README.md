@@ -10,5 +10,5 @@ This repo hosts the canonical public AVRS overview page for GitHub Pages.
 
 ## Deploy
 
-GitHub Pages deploys via `.github/workflows/pages.yml`.
+GitHub Pages deploys via `.github/workflows/pages.yml`. See [DEPLOYMENT.md](DEPLOYMENT.md) for setup instructions.
 
